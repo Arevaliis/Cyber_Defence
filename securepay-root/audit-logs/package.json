@@ -1,0 +1,12 @@
+{
+  "name": "audit-logs",
+  "version": "1.0.0",
+  "description": "Audit logs service for SecurePay Root",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  database:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: securepay
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "3000:3000"
+
+  transfer-service:
+    build: ./transfer-service
+    ports:
+      - "3001:3001"
+
+  audit-logs:
+    build: ./audit-logs
+    ports:
+      - "3002:3002"

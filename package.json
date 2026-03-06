@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Arevaliis/Cyber_Defence#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3"
   }
 }
